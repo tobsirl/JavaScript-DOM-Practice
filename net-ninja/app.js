@@ -21,13 +21,23 @@ const titles = document.getElementsByClassName('title');
 // Using Array.from to convert into an array
 // console.log(Array.isArray(Array.from(titles)));
 
-Array.from(titles).forEach(item => {
-  console.log(item);
-});
+// Array.from(titles).forEach(item => {
+//   console.log(item);
+// });
 
 const lis = document.getElementsByTagName('li');
 // console.log(lis);
 
-
+// use # for id and . for class
 const title = document.querySelector('.title').innerHTML;
 // console.log(title);
+
+// using css to grab the element you want
+const wrap = document.querySelector('#book-list li:nth-child(2) .name');
+// console.log(wrap);
+
+// using querySelectorAll() to grab multiple elements
+const books = document.querySelectorAll('#book-list li .name');
+// console.log(books);
+
+Array.from(books).forEach(book => console.log(book.innerText));
