@@ -1,8 +1,8 @@
-// Accessing elements in the DOM
-const banner = document.getElementById('page-banner'); // can't use # .
+// * Accessing elements in the DOM
+// const banner = document.getElementById('page-banner'); // can't use # .
 // console.log(banner);
 
-const bookList = document.getElementById('book-list'); // can't use # .
+// const bookList = document.getElementById('book-list'); // can't use # .
 // console.log(bookList);
 
 // Multiple elements can be accessed with bracket notation
@@ -40,4 +40,23 @@ const wrap = document.querySelector('#book-list li:nth-child(2) .name');
 const books = document.querySelectorAll('#book-list li .name');
 // console.log(books);
 
-Array.from(books).forEach(book => console.log(book.innerText));
+Array.from(books).forEach(book => console.log(book));
+
+// * Editting the DOM
+// Using textContent
+Array.from(books).forEach(book => (book.textContent += ' (book title)'));
+
+const bookList = document.querySelector('#book-list');
+//bookList.innerHTML = `<h2>Books and more books...</h2>`;
+bookList.innerHTML += `<p>This is how you add HTML</p>`;
+
+// Using nodeType to get the element number nodeName to get its name
+// using method hasChildNodes() to see if it has children
+const banner = document.querySelector('#page-banner');
+console.log(`#page-banner node type is: ${banner.nodeType}`);
+console.log(`#page-banner node name is: ${banner.nodeName}`);
+console.log(`#page-banner has child nodes: ${banner.hasChildNodes()}`);
+
+// cloning a node
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
