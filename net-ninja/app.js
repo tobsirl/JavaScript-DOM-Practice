@@ -60,3 +60,13 @@ console.log(`#page-banner has child nodes: ${banner.hasChildNodes()}`);
 // cloning a node
 const clonedBanner = banner.cloneNode(true);
 console.log(clonedBanner);
+
+// using parentNode + parentElement to move up through the nodes
+const bookList1 = document.querySelector('#book-list');
+console.log('This parent node is ', bookList1.parentNode);
+console.log('This parent element is ', bookList1.parentElement);
+console.log('This parent element is ', bookList1.parentElement.parentElement);
+
+// moveing down through the nodeList
+console.log(bookList1.childNodes);
+console.log(bookList1.children);
