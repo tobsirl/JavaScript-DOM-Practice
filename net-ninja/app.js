@@ -70,3 +70,15 @@ console.log('This parent element is ', bookList1.parentElement.parentElement);
 // moveing down through the nodeList
 console.log(bookList1.childNodes);
 console.log(bookList1.children);
+
+// traversing between siblings
+const bookList2 = document.querySelector('#book-list');
+
+console.log('book-list next sibling is ', bookList2.nextSibling);
+console.log('book-list next sibling is ', bookList2.nextElementSibling);
+
+console.log('book-list previous sibling is ', bookList2.previousSibling);
+console.log('book-list previous sibling is ', bookList2.previousElementSibling);
+
+bookList2.previousElementSibling.querySelector('p').innerHTML +=
+  '<br/>Too cool for everyone else!';
