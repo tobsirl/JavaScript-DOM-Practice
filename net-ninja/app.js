@@ -53,9 +53,9 @@ bookList.innerHTML += `<p>This is how you add HTML</p>`;
 // Using nodeType to get the element number nodeName to get its name
 // using method hasChildNodes() to see if it has children
 const banner = document.querySelector('#page-banner');
-console.log(`#page-banner node type is: ${banner.nodeType}`);
-console.log(`#page-banner node name is: ${banner.nodeName}`);
-console.log(`#page-banner has child nodes: ${banner.hasChildNodes()}`);
+// console.log(`#page-banner node type is: ${banner.nodeType}`);
+// console.log(`#page-banner node name is: ${banner.nodeName}`);
+// console.log(`#page-banner has child nodes: ${banner.hasChildNodes()}`);
 
 // cloning a node
 const clonedBanner = banner.cloneNode(true);
@@ -63,22 +63,40 @@ console.log(clonedBanner);
 
 // using parentNode + parentElement to move up through the nodes
 const bookList1 = document.querySelector('#book-list');
-console.log('This parent node is ', bookList1.parentNode);
-console.log('This parent element is ', bookList1.parentElement);
-console.log('This parent element is ', bookList1.parentElement.parentElement);
+// console.log('This parent node is ', bookList1.parentNode);
+// console.log('This parent element is ', bookList1.parentElement);
+// console.log('This parent element is ', bookList1.parentElement.parentElement);
 
 // moveing down through the nodeList
-console.log(bookList1.childNodes);
-console.log(bookList1.children);
+// console.log(bookList1.childNodes);
+// console.log(bookList1.children);
 
 // traversing between siblings
 const bookList2 = document.querySelector('#book-list');
 
-console.log('book-list next sibling is ', bookList2.nextSibling);
-console.log('book-list next sibling is ', bookList2.nextElementSibling);
+// console.log('book-list next sibling is ', bookList2.nextSibling);
+// console.log('book-list next sibling is ', bookList2.nextElementSibling);
 
-console.log('book-list previous sibling is ', bookList2.previousSibling);
-console.log('book-list previous sibling is ', bookList2.previousElementSibling);
+// console.log('book-list previous sibling is ', bookList2.previousSibling);
+// console.log('book-list previous sibling is ', bookList2.previousElementSibling);
 
 bookList2.previousElementSibling.querySelector('p').innerHTML +=
   '<br/>Too cool for everyone else!';
+
+// * Events
+const h2 = document.querySelector('#book-list h2');
+h2.addEventListener('click', event => {
+  console.log(event.target);
+  console.log(event);
+});
+
+const btns = document.querySelectorAll('#book-list .delete');
+console.log(btns);
+
+// ! Event bubbling 
+Array.from(btns).forEach(btn => {
+  btn.addEventListener('click', event => {
+    const li = event.target.parentElement;
+    li.parentNode.removeChild(li);
+  });
+});
