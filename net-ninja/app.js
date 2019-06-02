@@ -93,10 +93,31 @@ h2.addEventListener('click', event => {
 const btns = document.querySelectorAll('#book-list .delete');
 console.log(btns);
 
-// ! Event bubbling 
+// ! Event bubbling
 Array.from(btns).forEach(btn => {
   btn.addEventListener('click', event => {
     const li = event.target.parentElement;
     li.parentNode.removeChild(li);
   });
+});
+
+// const list = document.querySelector('#book-list ul');
+
+// list.addEventListener('click', event => {
+//   if (event.target.className === 'delete') {
+//     const li = event.target.parentElement;
+//     list.closest(li);
+//   }
+// });
+
+console.log(document.forms['add-book']);
+
+// * Forms
+// add book-list
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = addForm.querySelector('input[type="text"]').value;
+  console.log(data);
 });
