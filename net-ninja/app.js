@@ -101,7 +101,7 @@ Array.from(btns).forEach(btn => {
   });
 });
 
-// const list = document.querySelector('#book-list ul');
+const list = document.querySelector('#book-list ul');
 
 // list.addEventListener('click', event => {
 //   if (event.target.className === 'delete') {
@@ -119,5 +119,22 @@ const addForm = document.forms['add-book'];
 addForm.addEventListener('submit', event => {
   event.preventDefault();
   const data = addForm.querySelector('input[type="text"]').value;
-  console.log(data);
+
+  // adding the book to the dom, create elements
+  const li = document.createElement('li');
+  const bookName = document.createElement('span');
+  const deleteBtn = document.createElement('span');
+
+  // add content
+  deleteBtn.textContent = 'delete';
+  bookName.textContent = data;
+
+  // add classes
+  bookName.classList.add('name');
+  deleteBtn.classList.add('delete');
+
+  // append to document
+  li.appendChild(bookName);
+  li.appendChild(deleteBtn);
+  list.appendChild(li);
 });
