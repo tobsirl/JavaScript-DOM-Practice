@@ -138,3 +138,13 @@ addForm.addEventListener('submit', event => {
   li.appendChild(deleteBtn);
   list.appendChild(li);
 });
+
+// * Changing attributes
+const book = document.querySelector('li:first-child');
+
+book.getAttribute('class'); // get the attribute
+book.setAttribute('class', 'name-2'); // set the attribute
+book.hasAttribute('class'); // checks if the attribute is present boolean
+book.removeAttribute('class'); // removes the attribute
+
+console.log(book);
