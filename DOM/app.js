@@ -1,6 +1,6 @@
 let val;
 
-val = document;
+// val = document;
 // val = document.all;
 // val = document.all[2];
 // val = document.all.length;
@@ -29,12 +29,22 @@ val = document;
 // val = document.scripts;
 // val = document.scripts[2].getAttribute('src');
 
-let scripts = document.scripts;
+// let scripts = document.scripts;
 
-let scriptsArr = Array.from(scripts);
+// let scriptsArr = Array.from(scripts);
 
-scriptsArr.forEach(function (script) {
-  console.log(script.getAttribute('src'));
-});
+// scriptsArr.forEach(function (script) {
+//   console.log(script.getAttribute('src'));
+// });
 
-console.log(val); 
+// document.getElementById
+console.log(document.getElementById('task-title'));
+
+// Get things from the element
+console.log(document.getElementById('task-title').id);
+console.log(document.getElementById('task-title').className);
+
+// Change styling
+document.getElementById('task-title').style.background = '#333'
+
+// console.log(val);
