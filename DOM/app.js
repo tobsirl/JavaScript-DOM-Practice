@@ -48,6 +48,11 @@ console.log(document.getElementById('task-title').className);
 document.getElementById('task-title').style.background = '#333';
 document.getElementById('task-title').style.color = '#FFF';
 document.getElementById('task-title').style.padding = '5px';
-document.getElementById('task-title').style.display = 'none';
+// document.getElementById('task-title').style.display = 'none';
+
+// Change content
+document.getElementById('task-title').textContent = 'Task List';
+document.getElementById('task-title').innerText = 'My Tasks';
+document.getElementById('task-title').innerHTML = '<span style="color: red">Task List</span>';
 
 // console.log(val);
