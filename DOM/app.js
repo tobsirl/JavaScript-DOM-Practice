@@ -68,7 +68,7 @@ document.querySelector('li:last-child').style.color = 'red';
 document.querySelector('li:nth-child(3)').style.color = 'yellow';
 
 // document.getElementsByClassName
-const items = document.getElementsByClassName('collection-item');
+// const items = document.getElementsByClassName('collection-item');
 
 // console.log(items);
 // console.log(items[0]);
@@ -83,17 +83,32 @@ const items = document.getElementsByClassName('collection-item');
 // console.log(listItems);
 
 // document.getElementByTagName
-let lis = document.getElementsByTagName('li');
+// let lis = document.getElementsByTagName('li');
 
-console.log(lis);
-console.log(lis[0]);
+// console.log(lis);
+// console.log(lis[0]);
 
-lis[0].style.color = 'red';
-lis[3].textContent = 'Hello';
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
 
 // Convert HTML Collection into an array using Array.form()
-lis = Array.from(lis);
+// lis = Array.from(lis);
 
-lis.reverse();
+// lis.reverse().reverse();
 
-console.log(lis);
+// lis.forEach((li, index) => {
+//   console.log(li.className);
+//   li.textContent = `${index + 1}: Hello`;
+// });
+
+// console.log(lis);
+
+// document.querySelectorAll() this will give you a NodeList
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+items.forEach((item, index) => {
+  console.log(item.className);
+  item.textContent = `${index + 1}: Hello`;
+});
+
+console.log(items);
