@@ -111,4 +111,15 @@ items.forEach((item, index) => {
   item.textContent = `${index + 1}: Hello`;
 });
 
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach((item, index) => {
+  item.style.background = '#eee';
+});
+
+liEven.forEach((item, index) => {
+  item.style.background = '#ccc';
+});
+
 console.log(items);
