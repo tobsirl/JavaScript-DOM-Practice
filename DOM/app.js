@@ -38,11 +38,11 @@ let val;
 // });
 
 // document.getElementById
-console.log(document.getElementById('task-title'));
+// console.log(document.getElementById('task-title'));
 
 // Get things from the element
-console.log(document.getElementById('task-title').id);
-console.log(document.getElementById('task-title').className);
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
 
 // Change styling
 document.getElementById('task-title').style.background = '#333';
@@ -57,12 +57,21 @@ document.getElementById('task-title').innerHTML =
   '<span style="color: red">Task List</span>';
 
 // document.querySelector()
-console.log(document.querySelector('#task-title'));
-console.log(document.querySelector('.card-title'));
-console.log(document.querySelector('h5'));
+// console.log(document.querySelector('#task-title'));
+// console.log(document.querySelector('.card-title'));
+// console.log(document.querySelector('h5'));
 
 document.querySelector('li').style.color = 'red';
 document.querySelector('ul li').style.color = 'blue';
 
 document.querySelector('li:last-child').style.color = 'red';
 document.querySelector('li:nth-child(3)').style.color = 'yellow';
+
+// document.getElementsByClassName
+const items = document.getElementsByClassName('collection-item')
+
+console.log(items);
+console.log(items[0]);
+
+items[0].style.color = 'red'
+items[3].textContent = 'Hello'
