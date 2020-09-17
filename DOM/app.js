@@ -1,4 +1,4 @@
-let val;
+// let val;
 
 // val = document;
 // val = document.all;
@@ -104,22 +104,48 @@ document.querySelector('li:nth-child(3)').style.color = 'yellow';
 // console.log(lis);
 
 // document.querySelectorAll() this will give you a NodeList
-const items = document.querySelectorAll('ul.collection li.collection-item');
+// const items = document.querySelectorAll('ul.collection li.collection-item');
 
-items.forEach((item, index) => {
-  console.log(item.className);
-  item.textContent = `${index + 1}: Hello`;
-});
+// items.forEach((item, index) => {
+//   console.log(item.className);
+//   item.textContent = `${index + 1}: Hello`;
+// });
 
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
 
-liOdd.forEach((item, index) => {
-  item.style.background = '#eee';
-});
+// liOdd.forEach((item, index) => {
+//   item.style.background = '#eee';
+// });
 
-liEven.forEach((item, index) => {
-  item.style.background = '#ccc';
-});
+// liEven.forEach((item, index) => {
+//   item.style.background = '#ccc';
+// });
 
-console.log(items);
+// console.log(items);
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+// Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[1].nodeType;
+
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text Node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
+
+// Get children element nodes
+// val = list.children;
+
+console.log(val);
