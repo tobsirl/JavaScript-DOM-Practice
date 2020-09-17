@@ -146,6 +146,37 @@ val = list.childNodes[1].nodeType;
 // 10 - Doctype
 
 // Get children element nodes
-// val = list.children;
+val = list.children;
+val = list.children[0];
+list.children[1].textContent = 'Hello';
+
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+
+// first child
+val = list.firstChild;
+val = list.firstElementChild;
+
+// last child
+val = list.lastChild;
+val = list.lastElementChild;
+
+// Count child elements
+val = list.childElementCount;
+
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+
+// Get prev sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
 
 console.log(val);
