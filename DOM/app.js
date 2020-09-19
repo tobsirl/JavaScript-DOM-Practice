@@ -45,27 +45,27 @@
 // console.log(document.getElementById('task-title').className);
 
 // Change styling
-document.getElementById('task-title').style.background = '#333';
-document.getElementById('task-title').style.color = '#FFF';
-document.getElementById('task-title').style.padding = '5px';
+// document.getElementById('task-title').style.background = '#333';
+// document.getElementById('task-title').style.color = '#FFF';
+// document.getElementById('task-title').style.padding = '5px';
 // document.getElementById('task-title').style.display = 'none';
 
 // Change content
-document.getElementById('task-title').textContent = 'Task List';
-document.getElementById('task-title').innerText = 'My Tasks';
-document.getElementById('task-title').innerHTML =
-  '<span style="color: red">Task List</span>';
+// document.getElementById('task-title').textContent = 'Task List';
+// document.getElementById('task-title').innerText = 'My Tasks';
+// document.getElementById('task-title').innerHTML =
+//   '<span style="color: red">Task List</span>';
 
 // document.querySelector()
 // console.log(document.querySelector('#task-title'));
 // console.log(document.querySelector('.card-title'));
 // console.log(document.querySelector('h5'));
 
-document.querySelector('li').style.color = 'red';
-document.querySelector('ul li').style.color = 'blue';
+// document.querySelector('li').style.color = 'red';
+// document.querySelector('ul li').style.color = 'blue';
 
-document.querySelector('li:last-child').style.color = 'red';
-document.querySelector('li:nth-child(3)').style.color = 'yellow';
+// document.querySelector('li:last-child').style.color = 'red';
+// document.querySelector('li:nth-child(3)').style.color = 'yellow';
 
 // document.getElementsByClassName
 // const items = document.getElementsByClassName('collection-item');
@@ -132,7 +132,7 @@ document.querySelector('li:nth-child(3)').style.color = 'yellow';
 // val = listItem;
 // val = list;
 
-// // Get child nodes
+// !Get child nodes
 // val = list.childNodes;
 // val = list.childNodes[0];
 // val = list.childNodes[0].nodeName;
@@ -181,34 +181,56 @@ document.querySelector('li:nth-child(3)').style.color = 'yellow';
 
 // console.log(val);
 
-// Create element
-const li = document.createElement('li');
+// !Create element
+// const li = document.createElement('li');
 
 // Add class
-li.className = 'collection-item';
+// li.className = 'collection-item';
 
 // Add id
-li.id = 'new-item';
+// li.id = 'new-item';
 
 // Add attribute
-li.setAttribute('title', 'New Item');
+// li.setAttribute('title', 'New Item');
 
 // Create text node and append
-li.appendChild(document.createTextNode('Hello World'));
+// li.appendChild(document.createTextNode('Hello World'));
 
 // Create new link element
-const link = document.createElement('a');
+// const link = document.createElement('a');
 
 // Add classes
-link.className = 'delete-item secondary-content';
+// link.className = 'delete-item secondary-content';
 
 // Add icon html
-link.innerHTML = `<i class="fa fa-remove"></i>`;
+// link.innerHTML = `<i class="fa fa-remove"></i>`;
 
 // Append link into li
-li.appendChild(link);
+// li.appendChild(link);
 
 // Append li as child to ul
-document.querySelector('ul.collection').appendChild(li);
+// document.querySelector('ul.collection').appendChild(li);
 
-console.log(li);
+// console.log(li);
+
+// !REPLACE ELEMENT
+// Create Element
+const newHeading = document.createElement('h2');
+
+// Add ID
+newHeading.id = 'task-title';
+
+// New text node
+newHeading.appendChild(document.createTextNode('Task List'));
+
+// Get the old heading
+const oldHeading = document.getElementById('task-title');
+
+// Parent
+const cardAction = document.querySelector('.card-action');
+
+// Replace
+cardAction.replaceChild(newHeading, oldHeading);
+
+console.log(newHeading);
+console.log(oldHeading);
