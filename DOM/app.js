@@ -334,12 +334,19 @@ const heading = document.querySelector('h5');
 // card.addEventListener('mouseleave', runEvent);
 
 // Mouse Over
-card.addEventListener('mouseover', runEvent);
+// card.addEventListener('mouseover', runEvent);
 
 // Mouse Out
-card.addEventListener('mouseout', runEvent);
+// card.addEventListener('mouseout', runEvent);
+
+// Mouse Move
+card.addEventListener('mousemove', runEvent);
 
 // Event Handler
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
+
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 }
