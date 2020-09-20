@@ -267,11 +267,31 @@
 // console.log(val);
 
 // !Event Listeners and The Event Object
-const btn = document.querySelector('.clear-tasks');
+// const btn = document.querySelector('.clear-tasks');
 
-btn.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log(`Click`);
-});
+// btn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   console.log(`Click`);
+// });
 
-console.log(btn);
+// console.log(btn);
+
+// Named function
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e) {
+  // console.log(`Clicked`);
+  let val;
+
+  val = e;
+
+  // Event target element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  val = e.target.classList;
+
+  // e.target.innerText = "Hello"
+
+  console.log(val);
+}
