@@ -321,11 +321,23 @@ const heading = document.querySelector('h5');
 // Doubleclick
 // clearBtn.addEventListener('dblclick', runEvent);
 
-// Mouse down 
+// Mouse down
 // clearBtn.addEventListener('mousedown', runEvent);
 
-// Mouse down 
-clearBtn.addEventListener('mouseup', runEvent);
+// Mouse down
+// clearBtn.addEventListener('mouseup', runEvent);
+
+// Mouse Enter
+// card.addEventListener('mouseenter', runEvent);
+
+// Mouse Leave
+// card.addEventListener('mouseleave', runEvent);
+
+// Mouse Over
+card.addEventListener('mouseover', runEvent);
+
+// Mouse Out
+card.addEventListener('mouseout', runEvent);
 
 // Event Handler
 function runEvent(e) {
