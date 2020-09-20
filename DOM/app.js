@@ -316,7 +316,16 @@ const card = document.querySelector('.card');
 const heading = document.querySelector('h5');
 
 // Click
-clearBtn.addEventListener('click', runEvent);
+// clearBtn.addEventListener('click', runEvent);
+
+// Doubleclick
+// clearBtn.addEventListener('dblclick', runEvent);
+
+// Mouse down 
+// clearBtn.addEventListener('mousedown', runEvent);
+
+// Mouse down 
+clearBtn.addEventListener('mouseup', runEvent);
 
 // Event Handler
 function runEvent(e) {
