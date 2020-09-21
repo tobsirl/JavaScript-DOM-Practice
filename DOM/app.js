@@ -370,10 +370,19 @@ taskInput.value = '';
 // taskInput.addEventListener('keypress', runEvent);
 
 // focus
-taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('focus', runEvent);
 
 // blur
-taskInput.addEventListener('blur', runEvent);
+// taskInput.addEventListener('blur', runEvent);
+
+// cut
+// taskInput.addEventListener('cut', runEvent);
+
+// paste
+// taskInput.addEventListener('paste', runEvent);
+
+// input
+// taskInput.addEventListener('input', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
