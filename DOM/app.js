@@ -384,14 +384,30 @@ taskInput.value = '';
 // input
 // taskInput.addEventListener('input', runEvent);
 
-function runEvent(e) {
-  console.log(`EVENT TYPE: ${e.type}`);
+// function runEvent(e) {
+//   console.log(`EVENT TYPE: ${e.type}`);
 
-  console.log(e.target.value);
+//   console.log(e.target.value);
 
-  // heading.innerText = e.target.value;
-  // Get input value
-  // console.log(taskInput.value);
+// heading.innerText = e.target.value;
+// Get input value
+// console.log(taskInput.value);
 
-  // e.preventDefault();
-}
+// e.preventDefault();
+
+// Event Bubbling
+document
+  .querySelector('.card-title')
+  .addEventListener('click', () => console.log('card title'));
+
+document
+  .querySelector('.card-content')
+  .addEventListener('click', () => console.log('card content'));
+
+document
+  .querySelector('.card')
+  .addEventListener('click', () => console.log('card'));
+
+document
+  .querySelector('.col')
+  .addEventListener('click', () => console.log('col'));
